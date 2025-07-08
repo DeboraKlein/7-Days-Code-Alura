@@ -515,7 +515,7 @@ percentual.style.text_gradient(cmap='RdYlGn',low=1, axis=1,vmax=0.1,vmin=0)\
 
 This project helped me reinforce core concepts of Python and Pandas through a real-world context. It wasn't just technical — I practiced translating raw data into strategic, actionable stories that could help guide decision-making within academic institutions.
 
-It also reminded me how important it is to **ask the right questions** before jumping into analysis. From user behaviors to collection trends and institutional KPIs, data becomes powerful when it’s connected to its purpose. 💙
+It also reminded me how important it is to **ask the right questions** before jumping into analysis. From user behaviors to collection trends and institutional KPIs, data becomes powerful when it’s connected to its purpose. 💙 #7DaysOfCode
 
 ---
 
