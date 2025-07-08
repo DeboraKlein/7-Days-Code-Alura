@@ -46,6 +46,8 @@ dados_livros = pd.read_parquet('https://github.com/FranciscoFoz/7_Days_of_Code_A
 
 dados_emprestimos_livros = dados_emprestimos.merge(dados_livros)
 
+| Day | Theme | What I Did |
+|-----|-------|------------|
 | **2** | Data Transformation | Mapped CDU categories, converted user IDs, dropped irrelevant columns |
 
 CDU_lista = []
@@ -89,6 +91,9 @@ dados_emprestimos_livros = dados_emprestimos_livros.drop(columns='registro_siste
 
 dados_emprestimos_livros['matricula_ou_siape'] = dados_emprestimos_livros['matricula_ou_siape'].astype(str)
 
+
+| Day | Theme | What I Did |
+|-----|-------|------------|
 | **3** | Temporal Trends | Used `groupby()` + `Datetime` to analyze loan volume over time, plotted borrowing by year, month, and hour |
 
 import datetime as dt
@@ -183,6 +188,9 @@ emprestimos_por_exemplar = emprestimos_por_exemplar.sort_values(by='quantidade_e
 print("Top 10 exemplares mais emprestados:")
 display(emprestimos_por_exemplar.head(10))
 
+
+| Day | Theme | What I Did |
+|-----|-------|------------|
 | **4** | Categorical Insights | Created frequency tables by User Type, Collection, Library, and CDU Category using custom functions |
 
 dados_emprestimos_livros.tipo_vinculo_usuario.unique()
@@ -214,6 +222,9 @@ display(tabela_frequencia('biblioteca'))
 tabela_frequencia('CDU')
 display(tabela_frequencia('CDU'))
 
+
+| Day | Theme | What I Did |
+|-----|-------|------------|
 | **5** | Boxplot Analysis | Compared monthly loan distributions (2010–2020) by undergrad & postgrad students using `Seaborn` |
 
 import seaborn as sns
@@ -295,6 +306,9 @@ def gera_box_plot(dataset, x, y, titulo, subtitulo):
 
 gera_box_plot(alunos_posgraduacao_acervo_circulante, 'ano', 'quantidade', 'Distribuição dos empréstimos mensais', 'Realizados pelos alunos de pós-graduação no acervo circulante')
 
+
+| Day | Theme | What I Did |
+|-----|-------|------------|
 | **6** | Course-Based Loan Metrics | Merged Excel & JSON data sources, created pivot tables for loan activity across 6 degree programs |
 
 cadastro_usuarios_antes_2010 = pd.read_excel('https://github.com/FranciscoFoz/7_Days_of_Code_Alura-Python-Pandas/raw/main/Dia_6-Novos_dados_novas_analises/Datasets/matricula_alunos.xlsx',
@@ -361,6 +375,9 @@ emprestimos_tipo_usuario_curso_pivot = emprestimos_cursos_selecionados.pivot_tab
 )
 emprestimos_tipo_usuario_curso_pivot
 
+
+| Day | Theme | What I Did |
+|-----|-------|------------|
 | **7** | Percentage Change + HTML Export | Calculated year-over-year percentage change per course, exported styled HTML table with custom CSS 💅 |
 
 cadastro_usuarios_antes_2010 = pd.read_excel('https://github.com/FranciscoFoz/7_Days_of_Code_Alura-Python-Pandas/raw/main/Dia_6-Novos_dados_novas_analises/Datasets/matricula_alunos.xlsx',
